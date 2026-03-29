@@ -7,6 +7,7 @@ import { Input } from "@/components/ui/input";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import Image from "next/image";
 import Logo from "@/public/assets/logo.png";
+import BlackLogo from "@/public/assets/black_logo.png";
 
 import {
   NavigationMenu,
@@ -19,7 +20,13 @@ import {
   NavigationMenuViewport,
 } from "@/components/ui/navigation-menu";
 
-const Navbar = () => {
+interface NavbarProps {
+  className?: string;
+  textColor?: string;
+  useDarkLogo?: boolean;
+}
+
+const Navbar = ({ className, textColor, useDarkLogo }: NavbarProps) => {
   // const [isScrolled, setIsScrolled] = useState(false);
 
   // window.onbeforeunload = function () {
@@ -38,20 +45,20 @@ const Navbar = () => {
   // }, []);
 
   return (
-    <header className="fixed top-0 flex justify-between h-20 items-center w-full transition-colors duration-300 z-20  px-12 lg:px-20 bg-[#090E4A]">
-      <div className="text-white">
+    <header className={`fixed top-0 flex justify-between h-20 items-center w-full transition-colors duration-300 z-20 px-12 lg:px-20 ${className || 'bg-[#090E4A]'}`}>
+      <div className={textColor || "text-white"}>
         <Link
           href="/"
           className="flex items-center gap-2 text-lg  font-semibold lg:text-base"
         >
           {/* <Package2 className='h-6 w-6' /> */}
-          <Image src={Logo} alt="Logo" height={50} />
+          <Image src={useDarkLogo ? BlackLogo : Logo} alt="Logo" height={50} />
 
           <span className="sr-only">Catapult</span>
         </Link>
       </div>
 
-      <nav className="hidden h-full text-white flex-col gap-3 text-lg font-medium lg:flex lg:flex-row lg:items-center lg:gap-6 lg:text-sm xl:gap-14">
+      <nav className={`hidden h-full ${textColor || "text-white"} flex-col gap-3 text-lg font-medium lg:flex lg:flex-row lg:items-center lg:gap-6 lg:text-sm xl:gap-14`}>
         <Link
           href="/"
           className="transition-colors flex items-center hover:border-b-4 hover:border-[#FFE600] h-full"

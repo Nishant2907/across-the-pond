@@ -1,17 +1,11 @@
 /* eslint-disable @next/next/no-img-element */
 import React from "react";
 import Anand from "@/public/assets/people/Anand.jpg";
-import Ashish from "@/public/assets/people/Ashish.jpg";
 import Nikunj from "@/public/assets/people/Nikunj.jpg";
 
 import { FaLinkedin } from "react-icons/fa";
 import Link from "next/link";
 
-import { ChevronRight, ChevronLeft } from "lucide-react";
-
-import Article1 from "@/public/assets/insights/Article_1.png";
-import Article5 from "@/public/assets/insights/Article_5.png";
-import Article11 from "@/public/assets/insights/Article_11.png";
 
 export default function people() {
   return (
@@ -23,49 +17,7 @@ export default function people() {
             Our Leadership
           </p>
 
-          <div className="grid grid-cols-1 sm:grid-cols-3 justify-between my-4">
-            <div className=" hover:shadow-lg hover:border-1 border-gray-200">
-              <div className="flex flex-col mt-4 mx-3 md:mx-10">
-                <div className="flex flex-col lg:flex-row items-center my-6 gap-4">
-                  <img src={Ashish.src} alt="people" className="h-40 w-40 object-cover" />
-                  <div className="flex flex-col justify-center  md:items-start items-cente">
-                    <p className="text-4xl sm:text-xl md:text-2xl font-bold text-[#090E4A]">
-                      {" "}
-                      Ashish Khanna
-                    </p>
-                    <p className="py-1 text-sm lg:text-base font-normal">
-                      Co-founder & Exec Chair
-                    </p>
-
-                    <Link
-                      href="https://www.linkedin.com/in/ashish-khanna-1908644?jobid=1234&lipi=urn%3Ali%3Apage%3Ad_jobs_easyapply_pdfgenresume%3BcqGIPWzKR%2FqwmP3Ec8ZnEw%3D%3D&licu=urn%3Ali%3Acontrol%3Ad_jobs_easyapply_pdfgenresume-v02_profile"
-                      target="_blank"
-                      className="hover:text-yellow-500"
-                    >
-                      <FaLinkedin className="w-6 h-6" />
-                    </Link>
-                  </div>
-                </div>
-
-                <p className=" text-sm lg:text-base font-normal">
-                  Ashish helps clients in managing complex transformation
-                  programs involving new technology adoption, business &
-                  operating model transformation & new product launch.
-                </p>
-                <p className=" text-lg font-semibold mt-4 mb-1">
-                  Key assignments :{" "}
-                </p>
-                <p className=" text-sm lg:text-base font-normal mb-6">
-                  CEO- Dentsu Global Services, Amongst largest global network
-                  for marketing & advertising <br />
-                  COO- Genpact: $1.6B operating P&L of a world leader in
-                  Consulting & BPO <br />
-                  Managing Partner- Accenture, Setting up to scaling to10,000+
-                  team
-                </p>
-              </div>
-            </div>
-
+          <div className="grid grid-cols-1 sm:grid-cols-2 my-4">
             <div className="hover:shadow-lg hover:border-1 border-gray-200">
               <div className="flex flex-col mt-4 mx-3 md:mx-10">
                 <div className="flex flex-col lg:flex-row items-center my-6 gap-4">
